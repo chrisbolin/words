@@ -1,8 +1,7 @@
 'use strict';
 
 var titleToId = function titleToId(title) {
-  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-  return title ? (options.hash ? '#' : '') + title.toLowerCase().split(' ').join('-') : '#';
+  return title.toLowerCase().split(' ').join('-');
 };
 
 var PiecesApp = function PiecesApp(_ref) {
@@ -12,13 +11,7 @@ var PiecesApp = function PiecesApp(_ref) {
     'div',
     { id: 'app' },
     React.createElement(Header, { pieces: children }),
-    children.map(function (piece, i, pieces) {
-      return React.cloneElement(piece, {
-        previousPiece: pieces[i - 1],
-        nextPiece: pieces[i + 1],
-        key: i
-      });
-    })
+    children
   );
 };
 
@@ -63,7 +56,7 @@ var PieceLink = function PieceLink(_ref3) {
     { className: 'link', key: piece.props.title },
     React.createElement(
       'a',
-      { href: titleToId(piece.props.title, { hash: true }) },
+      { href: '#' + titleToId(piece.props.title) },
       piece.props.title
     )
   );
@@ -73,10 +66,6 @@ var Piece = function Piece(_ref4) {
   var title = _ref4.title,
       year = _ref4.year,
       children = _ref4.children,
-      _ref4$nextPiece = _ref4.nextPiece,
-      nextPiece = _ref4$nextPiece === undefined ? { props: {} } : _ref4$nextPiece,
-      _ref4$previousPiece = _ref4.previousPiece,
-      previousPiece = _ref4$previousPiece === undefined ? { props: {} } : _ref4$previousPiece,
       _ref4$type = _ref4.type,
       type = _ref4$type === undefined ? 'prose' : _ref4$type;
   return React.createElement(
@@ -89,7 +78,11 @@ var Piece = function Piece(_ref4) {
       React.createElement(
         'h1',
         null,
-        title
+        React.createElement(
+          'a',
+          { href: '#' + titleToId(title) },
+          title
+        )
       ),
       React.createElement(
         'div',

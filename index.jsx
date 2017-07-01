@@ -1,20 +1,11 @@
-const titleToId = (title, options = {}) => (
-  title ? (
-    (options.hash ? '#' : '')
-    + title.toLowerCase().split(' ').join('-')
-    ) : '#'
+const titleToId = (title) => (
+  title.toLowerCase().split(' ').join('-')
 );
 
 const PiecesApp = ({children = []}) => (
   <div id="app">
     <Header pieces={children}/>
-    {children.map((piece, i, pieces) => (
-      React.cloneElement(piece, {
-        previousPiece: pieces[i-1],
-        nextPiece: pieces[i+1],
-        key: i,
-      })
-    ))}
+    {children}
   </div>
 );
 
@@ -37,17 +28,17 @@ const Header = ({pieces}) => (
 
 const PieceLink = ({piece}) => (
   <div className="link" key={piece.props.title}>
-    <a href={titleToId(piece.props.title, {hash: true})}>
+    <a href={'#' + titleToId(piece.props.title)}>
       {piece.props.title}
     </a>
   </div>
 );
 
-const Piece = ({title, year, children, nextPiece = {props: {}}, previousPiece = {props: {}}, type = 'prose'}) => (
+const Piece = ({title, year, children, type = 'prose'}) => (
   <div id={titleToId(title)} className="piece page-container">
     <div className={`page ${type}`}>
       <hr/>
-      <h1>{title}</h1>
+      <h1><a href={'#' + titleToId(title)}>{title}</a></h1>
       <div className="year">{year}</div>
       <div className="body">{children}</div>
       <hr/>
