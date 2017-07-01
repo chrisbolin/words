@@ -6,7 +6,7 @@ const titleToId = (title, options = {}) => (
 );
 
 const PiecesApp = ({children = []}) => (
-  <div>
+  <div id="app">
     <Header pieces={children}/>
     {children.map((piece, i, pieces) => (
       React.cloneElement(piece, {
@@ -69,6 +69,36 @@ const NavLink = ({piece, type}) => (
 
 const App = () => (
   <PiecesApp>
+    <Piece title="Houseboat" year="2017">
+      <p>
+        The river is wide and slow here. Music reaches the houseboat from two rivaling temples on opposing banks jostling for listenership. It is joyful music. Morning music. Birds large and small cross the water. A deep rumble comes from upriver and a horn blast announces the unseen train, long and loud, passenger or cargo, leaving Kollam, nine kilometers south.
+      </p>
+      <p>
+        The houseboat's engine starts, raw and rambling, a mess of metal and tiny explosions before it is submerged into the water, subdued. Another train passes while the crew of two unties us from our night's resting place. We float slowly for a few long moments before the engine is engaged. The early morning air is almost chilly, still untouched by the sun.
+      </p>
+      <p>
+        I sit on the hard roof of the boat, which appears to be brown fiberglass. Another roof covers me, its thatched patterns heavily assisted by a cheaper, more expedient blue plastic tarp. The vessel as a whole follows in suit, a compromise between nostalgia and pragmatism (ties are ceded to the latter). With the engaged propeller we travel downstream, approaching one of the temples. Its morning song—clicking, strumming, immediate—drowns out the other’s. Abruptly, the song is aborted and replaced by the loud hum of an amplifier before that, too, is quelled. Silence visits the river.
+      </p>
+      <p>
+        The sun has still not reached either bank, but behind me it is exploding golden orange through morning haze and coconut trees. I raise a camera to it, embracing its cliché and my tourist role. I am painfully aware of my light skin.
+      </p>
+      <p>
+        A voice booms over the temple's unseen loudspeaker. "Hello?" The timid English question spoils the profundity of giant disembodied speech. But the voice waits, then returns with authority and cadence in another tongue: a scripture reading. (The syllables appear more angular than the Malayalam I've heard. I guess privately—and steeped in ignorance—that it is Sanskrit or Hindi.)
+      </p>
+      <p>
+        We are parked again, less than a kilometer from our night's post. Perhaps we've moved to distance ourselves from the stench of our own gasoline and refuse. A flock of birds passes over in an imperfect V. Goats and crows vie to be heard over the temple's next song (again clicking, strumming, immediate).
+      </p>
+      <p>
+        A woman stands just onshore. She watches, waits, never moving. She holds a white shawl over her mouth. All this I gather from my periphery, scared to meet her gaze. When I finally do it is only for a moment; her eyes are wide, piercing, and directed at me, through me. I look away. I do not know her role; I do not know mine.
+      </p>
+      <p>
+        A mosquito lands on my neck. I go down to the bedroom briefly for equipment against the morning: mosquito repellent and a long-sleeved shirt. The sun's rays finally touch the boat, igniting surfaces, pulling texture from chipped paint, giving warm shape to turned wooden columns.
+      </p>
+      <p>
+        I return to my seat. She is still standing onshore, searching, waiting. Her severe eyes are an uncomfortable relief, acknowledging my profound privilege starkly, without deference or kindness. Finally she turns and walks briskly away as the cook calls to me from the deck below: "Sir, breakfast is ready."
+      </p>
+    </Piece>
+
     <Piece title="Again" year="2016">
       <p>
         From the dirt path she saw the distant highway; it filled the forest with a muffled amorphous roar, an organic buzz. But its sound did not match its sight. No, the small cars sped alone - red, silver, black, blue - each a discrete mass; only together did their tiny voices melt into the deep, even chorus.
@@ -251,7 +281,7 @@ if (typeof document !== 'undefined') {
   );
 } else {
   var React = require('react');
-  var qsrv = require('qsrv');
+  var qsrv = require('./qsrv');
   qsrv.render({
     reactElement: <App/>,
     templatePath: 'index-template.html',

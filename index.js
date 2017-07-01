@@ -1,16 +1,16 @@
 'use strict';
 
 var titleToId = function titleToId(title) {
-  var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
   return title ? (options.hash ? '#' : '') + title.toLowerCase().split(' ').join('-') : '#';
 };
 
 var PiecesApp = function PiecesApp(_ref) {
-  var _ref$children = _ref.children;
-  var children = _ref$children === undefined ? [] : _ref$children;
+  var _ref$children = _ref.children,
+      children = _ref$children === undefined ? [] : _ref$children;
   return React.createElement(
     'div',
-    null,
+    { id: 'app' },
     React.createElement(Header, { pieces: children }),
     children.map(function (piece, i, pieces) {
       return React.cloneElement(piece, {
@@ -70,15 +70,15 @@ var PieceLink = function PieceLink(_ref3) {
 };
 
 var Piece = function Piece(_ref4) {
-  var title = _ref4.title;
-  var year = _ref4.year;
-  var children = _ref4.children;
-  var _ref4$nextPiece = _ref4.nextPiece;
-  var nextPiece = _ref4$nextPiece === undefined ? { props: {} } : _ref4$nextPiece;
-  var _ref4$previousPiece = _ref4.previousPiece;
-  var previousPiece = _ref4$previousPiece === undefined ? { props: {} } : _ref4$previousPiece;
-  var _ref4$type = _ref4.type;
-  var type = _ref4$type === undefined ? 'prose' : _ref4$type;
+  var title = _ref4.title,
+      year = _ref4.year,
+      children = _ref4.children,
+      _ref4$nextPiece = _ref4.nextPiece,
+      nextPiece = _ref4$nextPiece === undefined ? { props: {} } : _ref4$nextPiece,
+      _ref4$previousPiece = _ref4.previousPiece,
+      previousPiece = _ref4$previousPiece === undefined ? { props: {} } : _ref4$previousPiece,
+      _ref4$type = _ref4.type,
+      type = _ref4$type === undefined ? 'prose' : _ref4$type;
   return React.createElement(
     'div',
     { id: titleToId(title), className: 'piece page-container' },
@@ -114,8 +114,8 @@ var Piece = function Piece(_ref4) {
 };
 
 var NavLink = function NavLink(_ref5) {
-  var piece = _ref5.piece;
-  var type = _ref5.type;
+  var piece = _ref5.piece,
+      type = _ref5.type;
   return React.createElement('a', { href: piece ? titleToId(piece.props.title, { hash: true }) : '#',
     className: 'nav-link ' + (type || 'home'),
     title: type || 'home'
@@ -126,6 +126,55 @@ var App = function App() {
   return React.createElement(
     PiecesApp,
     null,
+    React.createElement(
+      Piece,
+      { title: 'Houseboat', year: '2017' },
+      React.createElement(
+        'p',
+        null,
+        'The river is wide and slow here. Music reaches the houseboat from two rivaling temples on opposing banks jostling for listenership. It is joyful music. Morning music. Birds large and small cross the water. A deep rumble comes from upriver and a horn blast announces the unseen train, long and loud, passenger or cargo, leaving Kollam, nine kilometers south.'
+      ),
+      React.createElement(
+        'p',
+        null,
+        'The houseboat\'s engine starts, raw and rambling, a mess of metal and tiny explosions before it is submerged into the water, subdued. Another train passes while the crew of two unties us from our night\'s resting place. We float slowly for a few long moments before the engine is engaged. The early morning air is almost chilly, still untouched by the sun.'
+      ),
+      React.createElement(
+        'p',
+        null,
+        'I sit on the hard roof of the boat, which appears to be brown fiberglass. Another roof covers me, its thatched patterns heavily assisted by a cheaper, more expedient blue plastic tarp. The vessel as a whole follows in suit, a compromise between nostalgia and pragmatism (ties are ceded to the latter). With the engaged propeller we travel downstream, approaching one of the temples. Its morning song\u2014clicking, strumming, immediate\u2014drowns out the other\u2019s. Abruptly, the song is aborted and replaced by the loud hum of an amplifier before that, too, is quelled. Silence visits the river.'
+      ),
+      React.createElement(
+        'p',
+        null,
+        'The sun has still not reached either bank, but behind me it is exploding golden orange through morning haze and coconut trees. I raise a camera to it, embracing its clich\xE9 and my tourist role. I am painfully aware of my light skin.'
+      ),
+      React.createElement(
+        'p',
+        null,
+        'A voice booms over the temple\'s unseen loudspeaker. "Hello?" The timid English question spoils the profundity of giant disembodied speech. But the voice waits, then returns with authority and cadence in another tongue: a scripture reading. (The syllables appear more angular than the Malayalam I\'ve heard. I guess privately\u2014and steeped in ignorance\u2014that it is Sanskrit or Hindi.)'
+      ),
+      React.createElement(
+        'p',
+        null,
+        'We are parked again, less than a kilometer from our night\'s post. Perhaps we\'ve moved to distance ourselves from the stench of our own gasoline and refuse. A flock of birds passes over in an imperfect V. Goats and crows vie to be heard over the temple\'s next song (again clicking, strumming, immediate).'
+      ),
+      React.createElement(
+        'p',
+        null,
+        'A woman stands just onshore. She watches, waits, never moving. She holds a white shawl over her mouth. All this I gather from my periphery, scared to meet her gaze. When I finally do it is only for a moment; her eyes are wide, piercing, and directed at me, through me. I look away. I do not know her role; I do not know mine.'
+      ),
+      React.createElement(
+        'p',
+        null,
+        'A mosquito lands on my neck. I go down to the bedroom briefly for equipment against the morning: mosquito repellent and a long-sleeved shirt. The sun\'s rays finally touch the boat, igniting surfaces, pulling texture from chipped paint, giving warm shape to turned wooden columns.'
+      ),
+      React.createElement(
+        'p',
+        null,
+        'I return to my seat. She is still standing onshore, searching, waiting. Her severe eyes are an uncomfortable relief, acknowledging my profound privilege starkly, without deference or kindness. Finally she turns and walks briskly away as the cook calls to me from the deck below: "Sir, breakfast is ready."'
+      )
+    ),
     React.createElement(
       Piece,
       { title: 'Again', year: '2016' },
@@ -175,7 +224,7 @@ var App = function App() {
       React.createElement(
         'p',
         null,
-        'I remove a canister of oatmeal from the cupboard. Because it is cheap, convenient, and healthy, it is my de facto breakfast. The mediocre taste and texture quietly honor asceticism, a virtue I\'ve long associated with wisdom (a nod to my father’s Protestantism?).'
+        'I remove a canister of oatmeal from the cupboard. Because it is cheap, convenient, and healthy, it is my de facto breakfast. The mediocre taste and texture quietly honor asceticism, a virtue I\'ve long associated with wisdom (a nod to my father\u2019s Protestantism?).'
       ),
       React.createElement(
         'p',
@@ -200,7 +249,7 @@ var App = function App() {
       React.createElement(
         'p',
         null,
-        'I firmly support A, as I cannot fathom why anyone would take B’s risk of incorrectly estimating the oatmeal-water ratio before heating, leading to either an inedible dry brick (not enough water) or hot oat soup (too much water). My wife subscribes to B and we do not discuss the topic often.'
+        'I firmly support A, as I cannot fathom why anyone would take B\u2019s risk of incorrectly estimating the oatmeal-water ratio before heating, leading to either an inedible dry brick (not enough water) or hot oat soup (too much water). My wife subscribes to B and we do not discuss the topic often.'
       ),
       React.createElement(
         'p',
@@ -220,12 +269,12 @@ var App = function App() {
       React.createElement(
         'p',
         null,
-        'After my breakfast is prepared, I walk down the short hallway (creak, creak) to the living room. On the coffee table, next to a bold red skein of yarn and a bold red crocheted scarf, is my wife’s wedding ring. I quickly note the simple connection - the ring must have been an impediment to her crocheting last night and had to be removed - but not before experiencing a slight preamble to panic, seeing this symbolic object in a symbolically threatening pose. I briefly but vividly imagine a bitter fight and a discarded ring before I fade back to reality.'
+        'After my breakfast is prepared, I walk down the short hallway (creak, creak) to the living room. On the coffee table, next to a bold red skein of yarn and a bold red crocheted scarf, is my wife\u2019s wedding ring. I quickly note the simple connection - the ring must have been an impediment to her crocheting last night and had to be removed - but not before experiencing a slight preamble to panic, seeing this symbolic object in a symbolically threatening pose. I briefly but vividly imagine a bitter fight and a discarded ring before I fade back to reality.'
       ),
       React.createElement(
         'p',
         null,
-        'I pick up the ring and inspect it. The small center diamond is flanked by two even smaller diamonds; all three are set in 14-karat white gold. I bought it when I was twenty-three years old, four months after graduating from college. Over the intervening years I have been both embarrassed of the diamonds’ small size (2011, Cambridge, Massachusetts: my best friend introduces us to his Harvard Business School classmates) and ashamed they were diamonds at all (2010, Austin, Texas: we watch Leonardo DiCaprio in Blood Diamond on DVD). Now I see that this tiny ring is a snapshot of another moment: that moment we were naïve and poor and got married too young by any reasonable measure. So often happiness is not reasonable.'
+        'I pick up the ring and inspect it. The small center diamond is flanked by two even smaller diamonds; all three are set in 14-karat white gold. I bought it when I was twenty-three years old, four months after graduating from college. Over the intervening years I have been both embarrassed of the diamonds\u2019 small size (2011, Cambridge, Massachusetts: my best friend introduces us to his Harvard Business School classmates) and ashamed they were diamonds at all (2010, Austin, Texas: we watch Leonardo DiCaprio in Blood Diamond on DVD). Now I see that this tiny ring is a snapshot of another moment: that moment we were na\xEFve and poor and got married too young by any reasonable measure. So often happiness is not reasonable.'
       )
     ),
     React.createElement(
@@ -234,7 +283,7 @@ var App = function App() {
       React.createElement(
         'p',
         null,
-        'It is the first frigid morning in many months and I’m prepared for my bicycle ride: I have gloves inside of my mittens, long underwear (my family always called them "long johns"), and second-hand ski goggles. I\'m self-conscious about the ski goggles, but they do prevent my eyes from watering in the cold, harsh wind. They also give a golden tint to the world that is subtle at first, its full effect not realized until I finish my journey and take off the goggles and everything loses that ephemeral warm glow.'
+        'It is the first frigid morning in many months and I\u2019m prepared for my bicycle ride: I have gloves inside of my mittens, long underwear (my family always called them "long johns"), and second-hand ski goggles. I\'m self-conscious about the ski goggles, but they do prevent my eyes from watering in the cold, harsh wind. They also give a golden tint to the world that is subtle at first, its full effect not realized until I finish my journey and take off the goggles and everything loses that ephemeral warm glow.'
       ),
       React.createElement(
         'p',
@@ -342,7 +391,7 @@ var App = function App() {
       React.createElement(
         'p',
         null,
-        'Later, on my trip home, the winter\'s bite is all but gone and I shed the heavy mittens. Snow melts and flows onto the glistening streets. The cyclist in front of me tries to ride no-handed and I\'m inspired: I\'ve learned and forgotten how to ride a bike without hands at least three separate times in my life. Maybe I’ll learn again. His arms are outstretched and carefree. His bike wobbles but stays upright.'
+        'Later, on my trip home, the winter\'s bite is all but gone and I shed the heavy mittens. Snow melts and flows onto the glistening streets. The cyclist in front of me tries to ride no-handed and I\'m inspired: I\'ve learned and forgotten how to ride a bike without hands at least three separate times in my life. Maybe I\u2019ll learn again. His arms are outstretched and carefree. His bike wobbles but stays upright.'
       )
     ),
     React.createElement(
@@ -482,7 +531,7 @@ if (typeof document !== 'undefined') {
   ReactDOM.render(React.createElement(App, null), document.getElementById('app'));
 } else {
   var React = require('react');
-  var qsrv = require('qsrv');
+  var qsrv = require('./qsrv');
   qsrv.render({
     reactElement: React.createElement(App, null),
     templatePath: 'index-template.html',
