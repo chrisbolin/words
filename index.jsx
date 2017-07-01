@@ -52,19 +52,7 @@ const Piece = ({title, year, children, nextPiece = {props: {}}, previousPiece = 
       <div className="body">{children}</div>
       <hr/>
     </div>
-    <div className="nav-links {/*unused */}">
-      <NavLink piece={previousPiece} type={'previous'}/>
-      <NavLink/>
-      <NavLink piece={nextPiece} type={'next'}/>
-    </div>
   </div>
-);
-
-const NavLink = ({piece, type}) => (
-  <a href={piece ? titleToId(piece.props.title, {hash: true}) : '#'}
-    className={`nav-link ${type || 'home'}`}
-    title={type || 'home'}
-    />
 );
 
 const App = () => (

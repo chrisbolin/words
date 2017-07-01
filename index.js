@@ -102,24 +102,8 @@ var Piece = function Piece(_ref4) {
         children
       ),
       React.createElement('hr', null)
-    ),
-    React.createElement(
-      'div',
-      { className: 'nav-links {/*unused */}' },
-      React.createElement(NavLink, { piece: previousPiece, type: 'previous' }),
-      React.createElement(NavLink, null),
-      React.createElement(NavLink, { piece: nextPiece, type: 'next' })
     )
   );
-};
-
-var NavLink = function NavLink(_ref5) {
-  var piece = _ref5.piece,
-      type = _ref5.type;
-  return React.createElement('a', { href: piece ? titleToId(piece.props.title, { hash: true }) : '#',
-    className: 'nav-link ' + (type || 'home'),
-    title: type || 'home'
-  });
 };
 
 var App = function App() {
