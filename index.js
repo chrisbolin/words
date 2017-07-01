@@ -44,7 +44,7 @@ var Header = function Header(_ref2) {
           return React.createElement(PieceLink, { piece: piece, key: i });
         })
       ),
-      React.createElement('hr', null)
+      React.createElement('hr', { className: 'bottom' })
     )
   );
 };
@@ -94,7 +94,12 @@ var Piece = function Piece(_ref4) {
         { className: 'body' },
         children
       ),
-      React.createElement('hr', null)
+      React.createElement('hr', { className: 'bottom' }),
+      React.createElement(
+        'a',
+        { href: '#', className: 'toc-link' },
+        '\uA71B'
+      )
     )
   );
 };

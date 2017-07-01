@@ -21,7 +21,7 @@ const Header = ({pieces}) => (
       <div className="links">
         {pieces.map((piece, i) => <PieceLink piece={piece} key={i}/>)}
       </div>
-      <hr/>
+      <hr className="bottom"/>
     </div>
   </div>
 );
@@ -41,7 +41,8 @@ const Piece = ({title, year, children, type = 'prose'}) => (
       <h1><a href={'#' + titleToId(title)}>{title}</a></h1>
       <div className="year">{year}</div>
       <div className="body">{children}</div>
-      <hr/>
+      <hr className="bottom"/>
+      <a href="#" className="toc-link">ꜛ</a>
     </div>
   </div>
 );

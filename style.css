@@ -17,9 +17,16 @@ hr {
   margin: 0;
   margin-bottom: 40px;
 }
-hr:last-child {
+hr.bottom {
   margin-bottom: 0;
   margin-top: 40px;
+}
+a.toc-link {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-size: 120%;
+  padding-top: 15px;
 }
 
 .page-container {
@@ -30,7 +37,7 @@ hr:last-child {
 }
 
 .page {
-  padding: 70px 70px;
+  padding: 70px 70px 40px;
   background-color: white;
   color: black;
 }
@@ -58,6 +65,9 @@ hr:last-child {
   font-weight: 700;
 }
 .header .links {
+  margin-bottom: 50px;
+}
+.header .links {
   -webkit-columns: 2 190px;
      -moz-columns: 2 190px;
           columns: 2 190px;
@@ -68,6 +78,9 @@ hr:last-child {
 }
 .header .links .link {
   margin-bottom: 3px;
+}
+.header .page {
+  padding-bottom: 70px;
 }
 
 .header a {
@@ -134,7 +147,7 @@ a:visited {
   }
 
   .page {
-    padding: 70px 30px;
+    padding: 70px 30px 40px;
   }
 
   .piece .page.prose p + p {
