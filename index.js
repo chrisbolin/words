@@ -118,7 +118,7 @@ var App = function App() {
       React.createElement(
         "p",
         null,
-        "Father busy at the counter, ignoring her. Now her hands and knees on the linoleum floor, inspecting the tree's truck - sap and bark:",
+        "Father busy at the counter, ignoring her. Now her hands and knees on the linoleum floor, inspecting the tree's trunk - sap and bark:",
         React.createElement("br", null),
         "\"It's real!\""
       ),

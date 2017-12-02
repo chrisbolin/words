@@ -57,7 +57,7 @@ const App = () => (
       </p>
       <p>
         Father busy at the counter, ignoring her. Now her hands and knees on the
-        linoleum floor, inspecting the tree's truck - sap and bark:
+        linoleum floor, inspecting the tree's trunk - sap and bark:
         <br />"It's real!"
       </p>
       <p>
