@@ -1,234 +1,404 @@
-const titleToId = (title) => (
-  title.toLowerCase().split(' ').join('-')
-);
+const titleToId = title =>
+  title
+    .toLowerCase()
+    .split(" ")
+    .join("-");
 
-const PiecesApp = ({children = []}) => (
+const PiecesApp = ({ children = [] }) => (
   <div id="app">
-    <Header pieces={children}/>
+    <Header pieces={children} />
     {children}
   </div>
 );
 
-const Header = ({pieces}) => (
+const Header = ({ pieces }) => (
   <div className="header page-container">
-     <a className="homepage" href="/">
-       chris bolin
+    <a className="homepage" href="/">
+      chris bolin
     </a>
     <div className="page">
       <div className="title">
         <h1>Words</h1>
       </div>
       <div className="links">
-        {pieces.map((piece, i) => <PieceLink piece={piece} key={i}/>)}
+        {pieces.map((piece, i) => <PieceLink piece={piece} key={i} />)}
       </div>
-      <hr className="bottom"/>
     </div>
   </div>
 );
 
-const PieceLink = ({piece}) => (
+const PieceLink = ({ piece }) => (
   <div className="link" key={piece.props.title}>
-    <a href={'#' + titleToId(piece.props.title)}>
-      {piece.props.title}
-    </a>
+    <a href={"#" + titleToId(piece.props.title)}>{piece.props.title}</a>
   </div>
 );
 
-const Piece = ({title, year, children, type = 'prose'}) => (
+const Piece = ({ title, year, children, theme = "prose" }) => (
   <div id={titleToId(title)} className="piece page-container">
-    <div className={`page ${type}`}>
-      <hr/>
-      <h1><a href={'#' + titleToId(title)}>{title}</a></h1>
+    <div className={`page ${theme}`}>
+      <h1>
+        <a href={"#" + titleToId(title)}>{title}</a>
+      </h1>
       <div className="year">{year}</div>
       <div className="body">{children}</div>
-      <hr className="bottom"/>
-      <a href="#" className="toc-link">ꜛ</a>
+      <a href="#" className="toc-link">
+        ꜛ
+      </a>
     </div>
   </div>
 );
 
 const App = () => (
   <PiecesApp>
+    <Piece title="The Lobby Christmas Tree" year="2017" theme="poem prose">
+      <p>
+        Eight years old, running across the lobby to the evergreen, elated: "Is
+        it real?"
+      </p>
+      <p>
+        Father busy at the counter, ignoring her. Now her hands and knees on the
+        linoleum floor, inspecting the tree's truck: sap and bark.
+      </p>
+      <p>"It's real!"</p>
+      <p>
+        Tree's trunk, sap and bark, in a small bucket of water. Needles more
+        yellow-green than green-green.
+      </p>
+      <p>"Is it dying?"</p>
+      <p>
+        Hands over needles and branches, fingers in the bucket's cold water: "Is
+        it supposed to die?"
+      </p>
+      <p>
+        Hands again over needles and branches, slowly, considering, pausing,
+        then ecstatic with understanding.
+      </p>
+      <p>"It's supposed to die!"</p>
+    </Piece>
     <Piece title="Houseboat" year="2017">
       <p>
-        The river is wide and slow here. Music reaches the houseboat from two rivaling temples on opposing banks jostling for listenership. It is joyful music. Morning music. Birds large and small cross the water. A deep rumble comes from upriver and a horn blast announces the unseen train, long and loud, passenger or cargo, leaving Kollam, nine kilometers south.
+        The river is wide and slow here. Music reaches the houseboat from two
+        rivaling temples on opposing banks jostling for listenership. It is
+        joyful music. Morning music. Birds large and small cross the water. A
+        deep rumble comes from upriver and a horn blast announces the unseen
+        train, long and loud, passenger or cargo, leaving Kollam, nine
+        kilometers south.
       </p>
       <p>
-        The houseboat's engine starts, raw and rambling, a mess of metal and tiny explosions before it is submerged into the water, subdued. Another train passes while the crew of two unties us from our night's resting place. We float slowly for a few long moments before the engine is engaged. The early morning air is almost chilly, still untouched by the sun.
+        The houseboat's engine starts, raw and rambling, a mess of metal and
+        tiny explosions before it is submerged into the water, subdued. Another
+        train passes while the crew of two unties us from our night's resting
+        place. We float slowly for a few long moments before the engine is
+        engaged. The early morning air is almost chilly, still untouched by the
+        sun.
       </p>
       <p>
-        I sit on the hard roof of the boat, which appears to be brown fiberglass. Another roof covers me, its thatched patterns heavily assisted by a cheaper, more expedient blue plastic tarp. The vessel as a whole follows in suit, a compromise between nostalgia and pragmatism (ties are ceded to the latter). With the engaged propeller we travel downstream, approaching one of the temples. Its morning song—clicking, strumming, immediate—drowns out the other’s. Abruptly, the song is aborted and replaced by the loud hum of an amplifier before that, too, is quelled. Silence visits the river.
+        I sit on the hard roof of the boat, which appears to be brown
+        fiberglass. Another roof covers me, its thatched patterns heavily
+        assisted by a cheaper, more expedient blue plastic tarp. The vessel as a
+        whole follows in suit, a compromise between nostalgia and pragmatism
+        (ties are ceded to the latter). With the engaged propeller we travel
+        downstream, approaching one of the temples. Its morning song—clicking,
+        strumming, immediate—drowns out the other’s. Abruptly, the song is
+        aborted and replaced by the loud hum of an amplifier before that, too,
+        is quelled. Silence visits the river.
       </p>
       <p>
-        The sun has still not reached either bank, but behind me it is exploding golden orange through morning haze and coconut trees. I raise a camera to it, embracing its cliché and my tourist role. I am painfully aware of my light skin.
+        The sun has still not reached either bank, but behind me it is exploding
+        golden orange through morning haze and coconut trees. I raise a camera
+        to it, embracing its cliché and my tourist role. I am painfully aware of
+        my light skin.
       </p>
       <p>
-        A voice booms over the temple's unseen loudspeaker. "Hello?" The timid English question spoils the profundity of giant disembodied speech. But the voice waits, then returns with authority and cadence in another tongue: a scripture reading. (The syllables appear more angular than the Malayalam I've heard. I guess privately—and steeped in ignorance—that it is Sanskrit or Hindi.)
+        A voice booms over the temple's unseen loudspeaker. "Hello?" The timid
+        English question spoils the profundity of giant disembodied speech. But
+        the voice waits, then returns with authority and cadence in another
+        tongue: a scripture reading. (The syllables appear more angular than the
+        Malayalam I've heard. I guess privately—and steeped in ignorance—that it
+        is Sanskrit or Hindi.)
       </p>
       <p>
-        We are parked again, less than a kilometer from our night's post. Perhaps we've moved to distance ourselves from the stench of our own gasoline and refuse. A flock of birds passes over in an imperfect V. Goats and crows vie to be heard over the temple's next song (again clicking, strumming, immediate).
+        We are parked again, less than a kilometer from our night's post.
+        Perhaps we've moved to distance ourselves from the stench of our own
+        gasoline and refuse. A flock of birds passes over in an imperfect V.
+        Goats and crows vie to be heard over the temple's next song (again
+        clicking, strumming, immediate).
       </p>
       <p>
-        A woman stands just onshore. She watches, waits, never moving. She holds a white shawl over her mouth. All this I gather from my periphery, scared to meet her gaze. When I finally do it is only for a moment; her eyes are wide, piercing, and directed at me, through me. I look away. I do not know her role; I do not know mine.
+        A woman stands just onshore. She watches, waits, never moving. She holds
+        a white shawl over her mouth. All this I gather from my periphery,
+        scared to meet her gaze. When I finally do it is only for a moment; her
+        eyes are wide, piercing, and directed at me, through me. I look away. I
+        do not know her role; I do not know mine.
       </p>
       <p>
-        A mosquito lands on my neck. I go down to the bedroom briefly for equipment against the morning: mosquito repellent and a long-sleeved shirt. The sun's rays finally touch the boat, igniting surfaces, pulling texture from chipped paint, giving warm shape to turned wooden columns.
+        A mosquito lands on my neck. I go down to the bedroom briefly for
+        equipment against the morning: mosquito repellent and a long-sleeved
+        shirt. The sun's rays finally touch the boat, igniting surfaces, pulling
+        texture from chipped paint, giving warm shape to turned wooden columns.
       </p>
       <p>
-        I return to my seat. She is still standing onshore, searching, waiting. Her severe eyes are an uncomfortable relief, acknowledging my profound privilege starkly, without deference or kindness. Finally she turns and walks briskly away as the cook calls to me from the deck below: "Sir, breakfast is ready."
+        I return to my seat. She is still standing onshore, searching, waiting.
+        Her severe eyes are an uncomfortable relief, acknowledging my profound
+        privilege starkly, without deference or kindness. Finally she turns and
+        walks briskly away as the cook calls to me from the deck below: "Sir,
+        breakfast is ready."
       </p>
     </Piece>
 
     <Piece title="Again" year="2016">
       <p>
-        From the dirt path she saw the distant highway; it filled the forest with a muffled amorphous roar, an organic buzz. But its sound did not match its sight. No, the small cars sped alone - red, silver, black, blue - each a discrete mass; only together did their tiny voices melt into the deep, even chorus.
+        From the dirt path she saw the distant highway; it filled the forest
+        with a muffled amorphous roar, an organic buzz. But its sound did not
+        match its sight. No, the small cars sped alone - red, silver, black,
+        blue - each a discrete mass; only together did their tiny voices melt
+        into the deep, even chorus.
       </p>
       <p>
-        She clutched the small stick in her hand, feeling its rough bark and smooth core before throwing it again down the path. The dog left her side and sprinted after it, his four paws a staccato cadence, fading. Soon he would return and drop the twig at her feet, wagging his tail with Sisyphean joy: again, again, again.
+        She clutched the small stick in her hand, feeling its rough bark and
+        smooth core before throwing it again down the path. The dog left her
+        side and sprinted after it, his four paws a staccato cadence, fading.
+        Soon he would return and drop the twig at her feet, wagging his tail
+        with Sisyphean joy: again, again, again.
       </p>
     </Piece>
 
-    <Piece title="Winter Tomorrow" year="2016" type="poem">
-      <p>
-        Melted snow on glistening streets under the bright yellow sun.
-      </p>
-      <p>
-        Tomorrow it may be winter again,
-      </p>
-      <p>
-        But today it is Spring.
-      </p>
+    <Piece title="Winter Tomorrow" year="2016" theme="poem">
+      <p>Melted snow on glistening streets under the bright yellow sun.</p>
+      <p>Tomorrow it may be winter again,</p>
+      <p>But today it is Spring.</p>
     </Piece>
 
     <Piece title="How to Prepare Oatmeal" year="2016">
       <p>
-        The kitchen sink is an emotional and domestic bellwether: has yesterday been resolved? Can today begin unburdened? Or are there outstanding debts, pans caked with bits of a meal already forgotten?
+        The kitchen sink is an emotional and domestic bellwether: has yesterday
+        been resolved? Can today begin unburdened? Or are there outstanding
+        debts, pans caked with bits of a meal already forgotten?
       </p>
       <p>
-        This morning is unencumbered: the right basin (the shallower of the two) is empty; the left basin is filled with clean, orderly, dry dishes. (Our small apartment does not have a dishwasher.)
+        This morning is unencumbered: the right basin (the shallower of the two)
+        is empty; the left basin is filled with clean, orderly, dry dishes. (Our
+        small apartment does not have a dishwasher.)
       </p>
       <p>
-        I remove a canister of oatmeal from the cupboard. Because it is cheap, convenient, and healthy, it is my de facto breakfast. The mediocre taste and texture quietly honor asceticism, a virtue I've long associated with wisdom (a nod to my father’s Protestantism?).
+        I remove a canister of oatmeal from the cupboard. Because it is cheap,
+        convenient, and healthy, it is my de facto breakfast. The mediocre taste
+        and texture quietly honor asceticism, a virtue I've long associated with
+        wisdom (a nod to my father’s Protestantism?).
+      </p>
+      <p>There are two general techniques to prepare oatmeal that I know of:</p>
+      <p>
+        A. Heat approximately 1 cup of water to boiling, then combine gradually
+        with a serving of oatmeal, using only as much water as is necessary to
+        achieve the desired consistency.
+      </p>
+      <p>or</p>
+      <p>
+        B. Combine approximately 1 cup of tap water with a serving of oatmeal,
+        using only as much water as is necessary to achieve the desired
+        consistency (importantly accounting for any water lost to subsequent
+        heating), then heat the mixture.
       </p>
       <p>
-        There are two general techniques to prepare oatmeal that I know of:
+        I firmly support A, as I cannot fathom why anyone would take B’s risk of
+        incorrectly estimating the oatmeal-water ratio before heating, leading
+        to either an inedible dry brick (not enough water) or hot oat soup (too
+        much water). My wife subscribes to B and we do not discuss the topic
+        often.
       </p>
       <p>
-        A. Heat approximately 1 cup of water to boiling, then combine gradually with a serving of oatmeal, using only as much water as is necessary to achieve the desired consistency.
+        I place the water into the microwave, an appliance that has been
+        omnipresent in my lifetime, rising to prominence in the United States
+        just before I was born. It is a strange device, bombarding water with
+        radiation, literally spinning the tiny molecules to a boil.
       </p>
       <p>
-        or
+        To pass the time I move some of the dry, clean dishes from the sink to
+        the shelves above. Both the sink and the small gas stove next to it are
+        bone white and older than my parents. Along with the creaking wooden
+        floors and cast iron radiators they transform the apartment into a
+        makeshift live-in time capsule: this is World War II New England.
       </p>
       <p>
-        B. Combine approximately 1 cup of tap water with a serving of oatmeal, using only as much water as is necessary to achieve the desired consistency (importantly accounting for any water lost to subsequent heating), then heat the mixture.
+        Despite its dated fixtures (also there are no three-prong electrical
+        outlets [Fun fact: grounded three-prong outlets were required in the
+        1971 National Electrical Code, effective January 1, 1974 - forty-two
+        years ago tomorrow.]) and small size, this apartment is the most
+        expensive I've rented. My rent has risen monotonically over my
+        adulthood, sometimes in small inflationary steps, sometimes in large
+        migratory leaps. If I now reversed those migrations, left the East Coast
+        and returned to the Great Plains, my current rent check would surely
+        secure a small mansion, full of shiny Frigidaire doors, silent floors,
+        and approved electrical wiring.
       </p>
       <p>
-        I firmly support A, as I cannot fathom why anyone would take B’s risk of incorrectly estimating the oatmeal-water ratio before heating, leading to either an inedible dry brick (not enough water) or hot oat soup (too much water). My wife subscribes to B and we do not discuss the topic often.
+        After my breakfast is prepared, I walk down the short hallway (creak,
+        creak) to the living room. On the coffee table, next to a bold red skein
+        of yarn and a bold red crocheted scarf, is my wife’s wedding ring. I
+        quickly note the simple connection - the ring must have been an
+        impediment to her crocheting last night and had to be removed - but not
+        before experiencing a slight preamble to panic, seeing this symbolic
+        object in a symbolically threatening pose. I briefly but vividly imagine
+        a bitter fight and a discarded ring before I fade back to reality.
       </p>
       <p>
-        I place the water into the microwave, an appliance that has been omnipresent in my lifetime, rising to prominence in the United States just before I was born. It is a strange device, bombarding water with radiation, literally spinning the tiny molecules to a boil.
-      </p>
-      <p>
-        To pass the time I move some of the dry, clean dishes from the sink to the shelves above. Both the sink and the small gas stove next to it are bone white and older than my parents. Along with the creaking wooden floors and cast iron radiators they transform the apartment into a makeshift live-in time capsule: this is World War II New England.
-      </p>
-      <p>
-        Despite its dated fixtures (also there are no three-prong electrical outlets [Fun fact: grounded three-prong outlets were required in the 1971 National Electrical Code, effective January 1, 1974 - forty-two years ago tomorrow.]) and small size, this apartment is the most expensive I've rented. My rent has risen monotonically over my adulthood, sometimes in small inflationary steps, sometimes in large migratory leaps. If I now reversed those migrations, left the East Coast and returned to the Great Plains, my current rent check would surely secure a small mansion, full of shiny Frigidaire doors, silent floors, and approved electrical wiring.
-      </p>
-      <p>
-        After my breakfast is prepared, I walk down the short hallway (creak, creak) to the living room. On the coffee table, next to a bold red skein of yarn and a bold red crocheted scarf, is my wife’s wedding ring. I quickly note the simple connection - the ring must have been an impediment to her crocheting last night and had to be removed - but not before experiencing a slight preamble to panic, seeing this symbolic object in a symbolically threatening pose. I briefly but vividly imagine a bitter fight and a discarded ring before I fade back to reality.
-      </p>
-      <p>
-        I pick up the ring and inspect it. The small center diamond is flanked by two even smaller diamonds; all three are set in 14-karat white gold. I bought it when I was twenty-three years old, four months after graduating from college. Over the intervening years I have been both embarrassed of the diamonds’ small size (2011, Cambridge, Massachusetts: my best friend introduces us to his Harvard Business School classmates) and ashamed they were diamonds at all (2010, Austin, Texas: we watch Leonardo DiCaprio in Blood Diamond on DVD). Now I see that this tiny ring is a snapshot of another moment: that moment we were naïve and poor and got married too young by any reasonable measure. So often happiness is not reasonable.
+        I pick up the ring and inspect it. The small center diamond is flanked
+        by two even smaller diamonds; all three are set in 14-karat white gold.
+        I bought it when I was twenty-three years old, four months after
+        graduating from college. Over the intervening years I have been both
+        embarrassed of the diamonds’ small size (2011, Cambridge, Massachusetts:
+        my best friend introduces us to his Harvard Business School classmates)
+        and ashamed they were diamonds at all (2010, Austin, Texas: we watch
+        Leonardo DiCaprio in Blood Diamond on DVD). Now I see that this tiny
+        ring is a snapshot of another moment: that moment we were naïve and poor
+        and got married too young by any reasonable measure. So often happiness
+        is not reasonable.
       </p>
     </Piece>
 
     <Piece title="Small Accomplishments" year="2015">
       <p>
-        It is the first frigid morning in many months and I’m prepared for my bicycle ride: I have gloves inside of my mittens, long underwear (my family always called them "long johns"), and second-hand ski goggles. I'm self-conscious about the ski goggles, but they do prevent my eyes from watering in the cold, harsh wind. They also give a golden tint to the world that is subtle at first, its full effect not realized until I finish my journey and take off the goggles and everything loses that ephemeral warm glow.
+        It is the first frigid morning in many months and I’m prepared for my
+        bicycle ride: I have gloves inside of my mittens, long underwear (my
+        family always called them "long johns"), and second-hand ski goggles.
+        I'm self-conscious about the ski goggles, but they do prevent my eyes
+        from watering in the cold, harsh wind. They also give a golden tint to
+        the world that is subtle at first, its full effect not realized until I
+        finish my journey and take off the goggles and everything loses that
+        ephemeral warm glow.
       </p>
       <p>
-        On my ride I pass a block with small signs stuck into the grass next to the street. Each sign has three lines of text, simple black glyphs against a yellow background:
+        On my ride I pass a block with small signs stuck into the grass next to
+        the street. Each sign has three lines of text, simple black glyphs
+        against a yellow background:
       </p>
       <p>
         Please
-        <br/>
+        <br />
         No Parking
-        <br/>
+        <br />
         Funeral
       </p>
       <p>
         Maybe today is a better day for a funeral than tomorrow: New Year's Day.
       </p>
       <p>
-        In the waiting room of my doctor's office (my first chore for the day) there are two water fountains, one slightly higher than the other. As with most water fountain pairs, only one is able to produce sufficient water pressure. A nurse calls me from the other end of the room. She is wearing what appear to be her pajamas (the sweatpants kind) and takes me to a small exam room. After wrapping my arm in a blood pressure cuff and forcing a thermometer into my ear, she asks my weight. Maybe her scale is broken; maybe she is simply lazy. I lie and tell her I am exactly three pounds heavier than I believe I am. She writes my lie along with the two other measurements on a brown paper towel she pulls from the wall dispenser and leaves the room.
+        In the waiting room of my doctor's office (my first chore for the day)
+        there are two water fountains, one slightly higher than the other. As
+        with most water fountain pairs, only one is able to produce sufficient
+        water pressure. A nurse calls me from the other end of the room. She is
+        wearing what appear to be her pajamas (the sweatpants kind) and takes me
+        to a small exam room. After wrapping my arm in a blood pressure cuff and
+        forcing a thermometer into my ear, she asks my weight. Maybe her scale
+        is broken; maybe she is simply lazy. I lie and tell her I am exactly
+        three pounds heavier than I believe I am. She writes my lie along with
+        the two other measurements on a brown paper towel she pulls from the
+        wall dispenser and leaves the room.
       </p>
       <p>
-        As I wait for my doctor I look into a small mirror mounted on the wall. As a boy my mother would tease me for looking into mirrors too often. She would sing what I assumed was a song from her youth: "You're So Vain." The lyric "I'll bet you think this song is about you, don't you?" always bothered me. (Now I see that the line's simple contraction is a direct product of self-reference.)
+        As I wait for my doctor I look into a small mirror mounted on the wall.
+        As a boy my mother would tease me for looking into mirrors too often.
+        She would sing what I assumed was a song from her youth: "You're So
+        Vain." The lyric "I'll bet you think this song is about you, don't you?"
+        always bothered me. (Now I see that the line's simple contraction is a
+        direct product of self-reference.)
       </p>
       <p>
-        In the mirror I try to decide how old my face looks. Assessing your own age is probably as hard as assessing your own beauty; both direct inward those finely tuned and fundamentally outward-looking perceptions. A fool's errand. Even so, I decide that my face looks young but not youthful.
+        In the mirror I try to decide how old my face looks. Assessing your own
+        age is probably as hard as assessing your own beauty; both direct inward
+        those finely tuned and fundamentally outward-looking perceptions. A
+        fool's errand. Even so, I decide that my face looks young but not
+        youthful.
       </p>
       <p>
-        I stare at my temples in the reflection and try to imagine the brain just between them. How profoundly I, like everyone else, am trapped in my own mind: all of these hopes and fears and deliberations exist only between those two temples.
+        I stare at my temples in the reflection and try to imagine the brain
+        just between them. How profoundly I, like everyone else, am trapped in
+        my own mind: all of these hopes and fears and deliberations exist only
+        between those two temples.
       </p>
       <p>
-        My doctor knocks on the door and enters. She sees my bike helmet (I forgot to lock it to the bicycle) and we discuss the woes of winter cycling for two or three minutes - long enough to be friendly but short enough to attend to the business at hand. She is kind and quirky and more leery of medications than I am.
+        My doctor knocks on the door and enters. She sees my bike helmet (I
+        forgot to lock it to the bicycle) and we discuss the woes of winter
+        cycling for two or three minutes - long enough to be friendly but short
+        enough to attend to the business at hand. She is kind and quirky and
+        more leery of medications than I am.
       </p>
       <p>
-        A few hours later I take a long shower at the gym and mentally write the first draft of this. I begin the process of remembering, which imperceptibly yet fundamentally changes the memories, unwittingly creating fiction from nonfiction: the past is subtly erased and replaced.
+        A few hours later I take a long shower at the gym and mentally write the
+        first draft of this. I begin the process of remembering, which
+        imperceptibly yet fundamentally changes the memories, unwittingly
+        creating fiction from nonfiction: the past is subtly erased and
+        replaced.
       </p>
       <p>
-        In the warm water I reflect on my own good mood and on how much simple joy I derive from tiny tasks finished. I picture a tombstone, its epitaph sardonic, truthful, self-conscious:
+        In the warm water I reflect on my own good mood and on how much simple
+        joy I derive from tiny tasks finished. I picture a tombstone, its
+        epitaph sardonic, truthful, self-conscious:
       </p>
       <p>
         Christopher Eric Bolin
-        <br/>
+        <br />
         1984 - TBD
-        <br/>
+        <br />
         A Life of Small Accomplishments
       </p>
       <p>
-        After a long while I leave the shower's comfort and maneuver awkwardly around the other gym-goers to my locker. It is so difficult to remember that insofar as they are in my way I am in theirs. I come up with an idea for a bumper sticker:
+        After a long while I leave the shower's comfort and maneuver awkwardly
+        around the other gym-goers to my locker. It is so difficult to remember
+        that insofar as they are in my way I am in theirs. I come up with an
+        idea for a bumper sticker:
+      </p>
+      <p>"We Are Traffic."</p>
+      <p>
+        (This was the third variation: "You're Traffic, Too" seemed to lack
+        self-awareness and "We Are All Traffic" felt too patriotic.)
       </p>
       <p>
-        "We Are Traffic."
+        I go to a falafel shop for a late lunch and mentally write the second
+        draft of this, leaving small notes and hummus smudges on my phone. I am
+        alone but successfully enjoying my own company, which seems to me the
+        only secret to happiness; there are many options to distract you from
+        yourself, but they all fade in time.
       </p>
       <p>
-        (This was the third variation: "You're Traffic, Too" seemed to lack self-awareness and "We Are All Traffic" felt too patriotic.)
+        After lunch I pass a bank and make a whim decision: I will get 20
+        dollars in quarters, because you can never have too many laundry
+        quarters (another small accomplishment). Almost all of my brief
+        interactions with bank tellers have been pleasant. Perhaps this is
+        because tellers are better paid than most in customer service. Or maybe
+        it's because at a bank everyone seems to be on their best behavior -
+        quiet, dignified, adult. After the teller trades 80 quarters for my bill
+        we exchange festive parting words.
+      </p>
+      <p>The Bank Teller: "Happy New Year!"</p>
+      <p>Me: "Happy New Year's!"</p>
+      <p>
+        (Is "Happy New Year's" excusable - ostensibly as a truncated "Happy New
+        Year's Day" - or not?)
       </p>
       <p>
-        I go to a falafel shop for a late lunch and mentally write the second draft of this, leaving small notes and hummus smudges on my phone. I am alone but successfully enjoying my own company, which seems to me the only secret to happiness; there are many options to distract you from yourself, but they all fade in time.
-      </p>
-      <p>
-        After lunch I pass a bank and make a whim decision: I will get 20 dollars in quarters, because you can never have too many laundry quarters (another small accomplishment). Almost all of my brief interactions with bank tellers have been pleasant. Perhaps this is because tellers are better paid than most in customer service. Or maybe it's because at a bank everyone seems to be on their best behavior - quiet, dignified, adult. After the teller trades 80 quarters for my bill we exchange festive parting words.
-      </p>
-      <p>
-        The Bank Teller: "Happy New Year!"
-      </p>
-      <p>
-        Me: "Happy New Year's!"
-      </p>
-      <p>
-        (Is "Happy New Year's" excusable - ostensibly as a truncated "Happy New Year's Day" - or not?)
-      </p>
-      <p>
-        Later, on my trip home, the winter's bite is all but gone and I shed the heavy mittens. Snow melts and flows onto the glistening streets. The cyclist in front of me tries to ride no-handed and I'm inspired: I've learned and forgotten how to ride a bike without hands at least three separate times in my life. Maybe I’ll learn again. His arms are outstretched and carefree. His bike wobbles but stays upright.
+        Later, on my trip home, the winter's bite is all but gone and I shed the
+        heavy mittens. Snow melts and flows onto the glistening streets. The
+        cyclist in front of me tries to ride no-handed and I'm inspired: I've
+        learned and forgotten how to ride a bike without hands at least three
+        separate times in my life. Maybe I’ll learn again. His arms are
+        outstretched and carefree. His bike wobbles but stays upright.
       </p>
     </Piece>
 
-    <Piece title="Ageless" year="2015" type="poem">
+    <Piece title="Ageless" year="2015" theme="poem">
       <p>Full of life and lust</p>
       <p>Ancient born again anew</p>
       <p>The ageless Spring sun</p>
     </Piece>
 
-    <Piece title="The Winter Is Faltering" year="2015" type="poem">
+    <Piece title="The Winter Is Faltering" year="2015" theme="poem">
       <p>This cold morning seems somehow more industrial.</p>
       <p>Heavy trucks hum and bounce on the beaten streets.</p>
       <p>Steam pours from towers on the other side of the river.</p>
       <p>Weak morning light makes its way through the crisp winter air.</p>
       <p>The winter is faltering now, waning.</p>
-      <br/>
+      <br />
       <p>Of course there is the snow.</p>
       <p>Of course it covers our little city.</p>
       <p>But it, too, is faltering.</p>
@@ -236,35 +406,31 @@ const App = () => (
       <p>And I rise, too.</p>
     </Piece>
 
-    <Piece title="Drive" year="2014" type="poem">
+    <Piece title="Drive" year="2014" theme="poem">
       <p>Winter rising, tonight sinking.</p>
       <p>Well-groomed childhood, adult melancholy.</p>
       <p>Drive.</p>
-      <br/>
+      <br />
       <p>Fields rising, moon sinking.</p>
       <p>Stern childhood, broken over the earth.</p>
       <p>Drive.</p>
       <p>Drive.</p>
-      <br/>
+      <br />
       <p>A cold song comes,</p>
       <p>Open road in full view.</p>
       <p>Drive.</p>
     </Piece>
-
   </PiecesApp>
 );
-if (typeof document !== 'undefined') {
+if (typeof document !== "undefined") {
   // BROWSER
-  ReactDOM.render(
-    <App/>,
-    document.getElementById('app')
-  );
+  ReactDOM.render(<App />, document.getElementById("app"));
 } else {
-  var React = require('react');
-  var qsrv = require('./qsrv');
+  var React = require("react");
+  var qsrv = require("./qsrv");
   qsrv.render({
-    reactElement: <App/>,
-    templatePath: 'index-template.html',
-    elementId: 'app',
+    reactElement: <App />,
+    templatePath: "index-template.html",
+    elementId: "app"
   });
 }
