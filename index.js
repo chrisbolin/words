@@ -111,41 +111,36 @@ var App = function App() {
       React.createElement(
         "p",
         null,
-        "Eight years old, running across the lobby to the evergreen, elated: \"Is it real?\""
+        "Eight years old, running across the lobby to the evergreen, elated:",
+        React.createElement("br", null),
+        "\"Is it real?\""
       ),
       React.createElement(
         "p",
         null,
-        "Father busy at the counter, ignoring her. Now her hands and knees on the linoleum floor, inspecting the tree's truck: sap and bark."
-      ),
-      React.createElement(
-        "p",
-        null,
+        "Father busy at the counter, ignoring her. Now her hands and knees on the linoleum floor, inspecting the tree's truck - sap and bark:",
+        React.createElement("br", null),
         "\"It's real!\""
       ),
       React.createElement(
         "p",
         null,
-        "Tree's trunk, sap and bark, in a small bucket of water. Needles more yellow-green than green-green."
-      ),
-      React.createElement(
-        "p",
-        null,
+        "Tree's trunk, sap and bark, in a small bucket of water. Needles more yellow-green than green-green:",
+        React.createElement("br", null),
         "\"Is it dying?\""
       ),
       React.createElement(
         "p",
         null,
-        "Hands over needles and branches, fingers in the bucket's cold water: \"Is it supposed to die?\""
+        "Hands over needles and branches, fingers in the bucket's cold water:",
+        React.createElement("br", null),
+        "\"Is it supposed to die?\""
       ),
       React.createElement(
         "p",
         null,
-        "Hands again over needles and branches, slowly, considering, pausing, then ecstatic with understanding."
-      ),
-      React.createElement(
-        "p",
-        null,
+        "Hands again over needles and branches, slowly, considering, pausing, then ecstatic with understanding:",
+        React.createElement("br", null),
         "\"It's supposed to die!\""
       )
     ),

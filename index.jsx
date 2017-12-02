@@ -52,28 +52,28 @@ const App = () => (
   <PiecesApp>
     <Piece title="The Lobby Christmas Tree" year="2017" theme="poem prose">
       <p>
-        Eight years old, running across the lobby to the evergreen, elated: "Is
-        it real?"
+        Eight years old, running across the lobby to the evergreen, elated:
+        <br />"Is it real?"
       </p>
       <p>
         Father busy at the counter, ignoring her. Now her hands and knees on the
-        linoleum floor, inspecting the tree's truck: sap and bark.
+        linoleum floor, inspecting the tree's truck - sap and bark:
+        <br />"It's real!"
       </p>
-      <p>"It's real!"</p>
       <p>
         Tree's trunk, sap and bark, in a small bucket of water. Needles more
-        yellow-green than green-green.
+        yellow-green than green-green:
+        <br />"Is it dying?"
       </p>
-      <p>"Is it dying?"</p>
       <p>
-        Hands over needles and branches, fingers in the bucket's cold water: "Is
-        it supposed to die?"
+        Hands over needles and branches, fingers in the bucket's cold water:
+        <br />"Is it supposed to die?"
       </p>
       <p>
         Hands again over needles and branches, slowly, considering, pausing,
-        then ecstatic with understanding.
+        then ecstatic with understanding:
+        <br />"It's supposed to die!"
       </p>
-      <p>"It's supposed to die!"</p>
     </Piece>
     <Piece title="Houseboat" year="2017">
       <p>
