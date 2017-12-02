@@ -18,7 +18,7 @@ const Header = ({ pieces }) => (
     </a>
     <div className="page">
       <div className="title">
-        <h1>Words</h1>
+        <h1>Writing</h1>
       </div>
       <div className="links">
         {pieces.map((piece, i) => <PieceLink piece={piece} key={i} />)}
