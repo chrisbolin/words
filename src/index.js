@@ -186,28 +186,27 @@ export const App = () => (
       <p>
         I remove a canister of oatmeal from the cupboard. Because it is cheap,
         convenient, and healthy, it is my de facto breakfast. The mediocre taste
-        and texture quietly honor asceticism, a virtue I've long associated with
-        wisdom (a nod to my father’s Protestantism?).
+        and texture quietly honor asceticism, a virtue from my childhood's
+        Protestantism.
       </p>
       <p>There are two general techniques to prepare oatmeal that I know of:</p>
       <p>
-        A. Heat approximately 1 cup of water to boiling, then combine gradually
-        with a serving of oatmeal, using only as much water as is necessary to
-        achieve the desired consistency.
+        <b>A. Pre-heated water:</b> Heat approximately 1 cup of water to
+        boiling, then combine gradually with a serving of oatmeal, using only as
+        much water as is necessary to achieve the desired consistency.
       </p>
       <p>or</p>
       <p>
-        B. Combine approximately 1 cup of tap water with a serving of oatmeal,
-        using only as much water as is necessary to achieve the desired
-        consistency (importantly accounting for any water lost to subsequent
-        heating), then heat the mixture.
+        <b>B. Tap water:</b> Combine approximately 1 cup of tap water with a
+        serving of oatmeal, using only as much water as is necessary to achieve
+        the desired consistency (importantly accounting for any water lost to
+        subsequent heating), then heat the mixture.
       </p>
       <p>
         I firmly support A, as I cannot fathom why anyone would take B’s risk of
         incorrectly estimating the oatmeal-water ratio before heating, leading
-        to either an inedible dry brick (not enough water) or hot oat soup (too
-        much water). My wife subscribes to B and we do not discuss the topic
-        often.
+        to either an inedible dry brick or hot oat soup. My wife subscribes to B
+        and we do not discuss the topic often.
       </p>
       <p>
         I place the water into the microwave, an appliance that has been
@@ -240,22 +239,22 @@ export const App = () => (
         of yarn and a bold red crocheted scarf, is my wife’s wedding ring. I
         quickly note the simple connection - the ring must have been an
         impediment to her crocheting last night and had to be removed - but not
-        before experiencing a slight preamble to panic, seeing this symbolic
-        object in a symbolically threatening pose. I briefly but vividly imagine
-        a bitter fight and a discarded ring before I fade back to reality.
+        before experiencing the preamble to panic, seeing this symbolic object
+        in such a symbolically threatening pose. I briefly but vividly imagine a
+        bitter fight and a discarded ring before I fade back to reality.
       </p>
       <p>
         I pick up the ring and inspect it. The small center diamond is flanked
         by two even smaller diamonds; all three are set in 14-karat white gold.
         I bought it when I was twenty-three years old, four months after
         graduating from college. Over the intervening years I have been both
-        embarrassed of the diamonds’ small size (2011, Cambridge, Massachusetts:
-        my best friend introduces us to his Harvard Business School classmates)
-        and ashamed they were diamonds at all (2010, Austin, Texas: we watch
-        Leonardo DiCaprio in Blood Diamond on DVD). Now I see that this tiny
-        ring is a snapshot of another moment: that moment we were naïve and poor
-        and got married too young by any reasonable measure. So often happiness
-        is not reasonable.
+        embarrassed of the diamonds’ small size (Cambridge, Massachusetts: my
+        best friend introduces us to his Harvard Business School classmates) and
+        embarrassed they were diamonds at all (Austin, Texas: we watch Leonardo
+        DiCaprio in <i>Blood Diamond</i> on DVD). Now I see that this tiny ring
+        is a snapshot of another time: that moment we were naïve and poor and
+        got married too young by any reasonable measure. So often happiness is
+        not reasonable.
       </p>
     </Piece>
 
