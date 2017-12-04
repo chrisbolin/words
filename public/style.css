@@ -96,7 +96,7 @@ a.toc-link {
 
 a {
   color: inherit;
-  transition: all 350ms linear;
+  transition: color 800ms ease-out, border-bottom-color 300ms ease-out;
   text-decoration: none;
 }
 
