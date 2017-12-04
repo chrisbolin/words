@@ -128,14 +128,14 @@ var App = function App() {
       _react2.default.createElement(
         "p",
         null,
-        "Father busy at the counter, ignoring her. Now her hands and knees on the linoleum floor, inspecting the tree's trunk - sap and bark:",
+        "Father busy at the counter, ignoring, now her hands and knees on the linoleum floor, inspecting the tree's trunk\u2014sap and bark:",
         _react2.default.createElement("br", null),
         "\"It's real!\""
       ),
       _react2.default.createElement(
         "p",
         null,
-        "Tree's trunk, sap and bark, in a small bucket of water. Needles more yellow-green than green-green:",
+        "Tree's trunk, sap and bark, in a small bucket of water, needles more yellow-green than green-green:",
         _react2.default.createElement("br", null),
         "\"Is it dying?\""
       ),
@@ -559,11 +559,13 @@ if (typeof document !== "undefined") {
   // BROWSER
   _reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById("root"));
 } else {
-  var qsrv = require("./qsrv");
-  qsrv.render({
-    reactElement: _react2.default.createElement(App, null),
-    templatePath: "index-template.html",
-    elementId: "app"
-  });
+  try {
+    var qsrv = require("./qsrv");
+    qsrv.render({
+      reactElement: _react2.default.createElement(App, null),
+      templatePath: "index-template.html",
+      elementId: "app"
+    });
+  } catch (e) {}
 }
 

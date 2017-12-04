@@ -59,12 +59,12 @@ const App = () => (
         <br />"Is it real?"
       </p>
       <p>
-        Father busy at the counter, ignoring her. Now her hands and knees on the
-        linoleum floor, inspecting the tree's trunk - sap and bark:
+        Father busy at the counter, ignoring, now her hands and knees on the
+        linoleum floor, inspecting the tree's trunk—sap and bark:
         <br />"It's real!"
       </p>
       <p>
-        Tree's trunk, sap and bark, in a small bucket of water. Needles more
+        Tree's trunk, sap and bark, in a small bucket of water, needles more
         yellow-green than green-green:
         <br />"Is it dying?"
       </p>
@@ -430,10 +430,12 @@ if (typeof document !== "undefined") {
   // BROWSER
   ReactDOM.render(<App />, document.getElementById("root"));
 } else {
-  var qsrv = require("./qsrv");
-  qsrv.render({
-    reactElement: <App />,
-    templatePath: "index-template.html",
-    elementId: "app"
-  });
+  try {
+    const qsrv = require("./qsrv");
+    qsrv.render({
+      reactElement: <App />,
+      templatePath: "index-template.html",
+      elementId: "app"
+    });
+  } catch (e) {}
 }
