@@ -51,7 +51,7 @@ const Piece = ({ title, year, children, theme = "prose" }) => (
   </div>
 );
 
-const App = () => (
+export const App = () => (
   <PiecesApp>
     <Piece title="The Lobby Christmas Tree" year="2017" theme="poem prose">
       <p>
@@ -429,13 +429,4 @@ const App = () => (
 if (typeof document !== "undefined") {
   // BROWSER
   ReactDOM.render(<App />, document.getElementById("root"));
-} else {
-  try {
-    const qsrv = require("./qsrv");
-    qsrv.render({
-      reactElement: <App />,
-      templatePath: "index-template.html",
-      elementId: "app"
-    });
-  } catch (e) {}
 }

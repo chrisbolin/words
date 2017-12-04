@@ -1,5 +1,10 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.App = undefined;
+
 var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
@@ -111,7 +116,7 @@ var Piece = function Piece(_ref4) {
   );
 };
 
-var App = function App() {
+var App = exports.App = function App() {
   return _react2.default.createElement(
     PiecesApp,
     null,
@@ -558,14 +563,5 @@ var App = function App() {
 if (typeof document !== "undefined") {
   // BROWSER
   _reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById("root"));
-} else {
-  try {
-    var qsrv = require("./qsrv");
-    qsrv.render({
-      reactElement: _react2.default.createElement(App, null),
-      templatePath: "index-template.html",
-      elementId: "app"
-    });
-  } catch (e) {}
 }
 
