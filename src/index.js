@@ -1,3 +1,6 @@
+import React from "react";
+import ReactDOM from "react-dom";
+
 const titleToId = title =>
   title
     .toLowerCase()
@@ -422,11 +425,11 @@ const App = () => (
     </Piece>
   </PiecesApp>
 );
+
 if (typeof document !== "undefined") {
   // BROWSER
-  ReactDOM.render(<App />, document.getElementById("app"));
+  ReactDOM.render(<App />, document.getElementById("root"));
 } else {
-  var React = require("react");
   var qsrv = require("./qsrv");
   qsrv.render({
     reactElement: <App />,
