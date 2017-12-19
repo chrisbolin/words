@@ -154,7 +154,7 @@ var App = exports.App = function App() {
       _react2.default.createElement(
         "p",
         null,
-        "Hands again over needles and branches, slowly, considering, pausing, then ecstatic with understanding:",
+        "Hands again over needles and branches, slowly, considering, pausing, suddenly knowing:",
         _react2.default.createElement("br", null),
         "\"It's supposed to die!\""
       )
@@ -214,7 +214,7 @@ var App = exports.App = function App() {
       _react2.default.createElement(
         "p",
         null,
-        "From the dirt path she saw the distant highway; it filled the forest with a muffled amorphous roar, an organic buzz. But its sound did not match its sight. No, the small cars sped alone - red, silver, black, blue - each a discrete mass; only together did their tiny voices melt into the deep, even chorus."
+        "From the dirt path she could just make out the distant highway. It filled the forest with a muffled amorphous roar, an organic buzz. But its sound did not match its sight. No, the small cars sped alone\u2014red, silver, black, blue\u2014each a discrete mass, and only together did their tiny voices melt into the deep, even chorus."
       ),
       _react2.default.createElement(
         "p",
@@ -257,7 +257,7 @@ var App = exports.App = function App() {
       _react2.default.createElement(
         "p",
         null,
-        "I remove a canister of oatmeal from the cupboard. Because it is cheap, convenient, and healthy, it is my de facto breakfast. The mediocre taste and texture quietly honor asceticism, a virtue I've long associated with wisdom (a nod to my father\u2019s Protestantism?)."
+        "I remove a canister of oatmeal from the cupboard. Because it is cheap, convenient, and healthy, it is my de facto breakfast. The mediocre taste and texture quietly honor asceticism, a virtue from my childhood's Protestantism."
       ),
       _react2.default.createElement(
         "p",
@@ -267,7 +267,12 @@ var App = exports.App = function App() {
       _react2.default.createElement(
         "p",
         null,
-        "A. Heat approximately 1 cup of water to boiling, then combine gradually with a serving of oatmeal, using only as much water as is necessary to achieve the desired consistency."
+        _react2.default.createElement(
+          "b",
+          null,
+          "A. Pre-heated water:"
+        ),
+        " Heat approximately 1 cup of water to boiling, then combine gradually with a serving of oatmeal, using only as much water as is necessary to achieve the desired consistency."
       ),
       _react2.default.createElement(
         "p",
@@ -277,12 +282,17 @@ var App = exports.App = function App() {
       _react2.default.createElement(
         "p",
         null,
-        "B. Combine approximately 1 cup of tap water with a serving of oatmeal, using only as much water as is necessary to achieve the desired consistency (importantly accounting for any water lost to subsequent heating), then heat the mixture."
+        _react2.default.createElement(
+          "b",
+          null,
+          "B. Tap water:"
+        ),
+        " Combine approximately 1 cup of tap water with a serving of oatmeal, using only as much water as is necessary to achieve the desired consistency (importantly accounting for any water lost to subsequent heating), then heat the mixture."
       ),
       _react2.default.createElement(
         "p",
         null,
-        "I firmly support A, as I cannot fathom why anyone would take B\u2019s risk of incorrectly estimating the oatmeal-water ratio before heating, leading to either an inedible dry brick (not enough water) or hot oat soup (too much water). My wife subscribes to B and we do not discuss the topic often."
+        "I firmly support A, as I cannot fathom why anyone would take B\u2019s risk of incorrectly estimating the oatmeal-water ratio before heating, leading to either an inedible dry brick or hot oat soup. My wife subscribes to B and we do not discuss the topic often."
       ),
       _react2.default.createElement(
         "p",
@@ -302,12 +312,18 @@ var App = exports.App = function App() {
       _react2.default.createElement(
         "p",
         null,
-        "After my breakfast is prepared, I walk down the short hallway (creak, creak) to the living room. On the coffee table, next to a bold red skein of yarn and a bold red crocheted scarf, is my wife\u2019s wedding ring. I quickly note the simple connection - the ring must have been an impediment to her crocheting last night and had to be removed - but not before experiencing a slight preamble to panic, seeing this symbolic object in a symbolically threatening pose. I briefly but vividly imagine a bitter fight and a discarded ring before I fade back to reality."
+        "After my breakfast is prepared, I walk down the short hallway (creak, creak) to the living room. On the coffee table, next to a bold red skein of yarn and a bold red crocheted scarf, is my wife\u2019s wedding ring. I quickly note the simple connection - the ring must have been an impediment to her crocheting last night and had to be removed - but not before experiencing the preamble to panic, seeing this symbolic object in such a symbolically threatening pose. I briefly but vividly imagine a bitter fight and a discarded ring before I fade back to reality."
       ),
       _react2.default.createElement(
         "p",
         null,
-        "I pick up the ring and inspect it. The small center diamond is flanked by two even smaller diamonds; all three are set in 14-karat white gold. I bought it when I was twenty-three years old, four months after graduating from college. Over the intervening years I have been both embarrassed of the diamonds\u2019 small size (2011, Cambridge, Massachusetts: my best friend introduces us to his Harvard Business School classmates) and ashamed they were diamonds at all (2010, Austin, Texas: we watch Leonardo DiCaprio in Blood Diamond on DVD). Now I see that this tiny ring is a snapshot of another moment: that moment we were na\xEFve and poor and got married too young by any reasonable measure. So often happiness is not reasonable."
+        "I pick up the ring and inspect it. The small center diamond is flanked by two even smaller diamonds; all three are set in 14-karat white gold. I bought it when I was twenty-three years old, four months after graduating from college. Over the intervening years I have been both embarrassed of the diamonds\u2019 small size (Cambridge, Massachusetts: my best friend introduces us to his Harvard Business School classmates) and embarrassed they were diamonds at all (Austin, Texas: we watch Leonardo DiCaprio in ",
+        _react2.default.createElement(
+          "i",
+          null,
+          "Blood Diamond"
+        ),
+        " on DVD). Now I see that this tiny ring is a snapshot of another time: that moment we were na\xEFve and poor and got married too young by any reasonable measure. So often happiness is not reasonable."
       )
     ),
     _react2.default.createElement(

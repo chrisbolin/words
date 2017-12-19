@@ -74,7 +74,7 @@ export const App = () => (
       </p>
       <p>
         Hands again over needles and branches, slowly, considering, pausing,
-        then ecstatic with understanding:
+        suddenly knowing:
         <br />"It's supposed to die!"
       </p>
     </Piece>
@@ -151,11 +151,11 @@ export const App = () => (
 
     <Piece title="Again" year="2016">
       <p>
-        From the dirt path she saw the distant highway; it filled the forest
-        with a muffled amorphous roar, an organic buzz. But its sound did not
-        match its sight. No, the small cars sped alone - red, silver, black,
-        blue - each a discrete mass; only together did their tiny voices melt
-        into the deep, even chorus.
+        From the dirt path she could just make out the distant highway. It
+        filled the forest with a muffled amorphous roar, an organic buzz. But
+        its sound did not match its sight. No, the small cars sped alone—red,
+        silver, black, blue—each a discrete mass, and only together did their
+        tiny voices melt into the deep, even chorus.
       </p>
       <p>
         She clutched the small stick in her hand, feeling its rough bark and
