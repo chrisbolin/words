@@ -2,9 +2,9 @@
   "scripts": {
     "start": "react-scripts start",
     "serve": "python -m SimpleHTTPServer",
-    "build": "yarn compile && yarn markup",
-    "compile": "babel src/index.js > build/index.js",
-    "markup": "node build/compile.js > index.html"
+    "build": "yarn babel && yarn compile",
+    "babel": "babel src/index.js > build/index.js",
+    "compile": "node build/compile.js > index.html"
   },
   "dependencies": {
     "babel-cli": "^6.24.1",
