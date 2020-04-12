@@ -1,5 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Alegreya:700,400,400italic);
-@import url(https://fonts.googleapis.com/css?family=Fanwood+Text);
+@import url(
+  https://fonts.googleapis.com/css?family=Alegreya:700,
+  400,
+  400italic
+);
+@import url(https://fonts.googleapis.com/css?family=Fanwood + Text);
 
 h1,
 p {
@@ -118,7 +122,7 @@ a:visited {
 .piece .page h1 a {
   color: inherit;
 }
-.piece .page .year {
+.piece .page .date {
   font-family: "Alegreya", Georgia, serif;
   font-style: italic;
   margin: 12px 0 38px;

@@ -34,13 +34,13 @@ const PieceLink = ({ piece }) => (
   </div>
 );
 
-const Piece = ({ title, year, children, theme = "prose" }) => (
+const Piece = ({ title, date, children, theme = "prose" }) => (
   <div id={titleToId(title)} className="piece page-container">
     <div className={`page ${theme}`}>
       <h1>
         <a href={"#" + titleToId(title)}>{title}</a>
       </h1>
-      <div className="year">{year}</div>
+      <div className="date">{date}</div>
       <div className="body">{children}</div>
       <a href="#" className="toc-link">
         ꜛ
@@ -51,7 +51,7 @@ const Piece = ({ title, year, children, theme = "prose" }) => (
 
 export const App = () => (
   <PiecesApp>
-    <Piece title="Eyelids (April)" year="2020" theme="poem">
+    <Piece title="Eyelids" date="April, 2020" theme="poem">
       <p>In these times of darkness</p>
       <p>Without</p>
       <p>Close your eyes slowly</p>
@@ -61,7 +61,7 @@ export const App = () => (
       <p>Within</p>
     </Piece>
 
-    <Piece title="The Lobby Christmas Tree" year="2017" theme="poem prose">
+    <Piece title="The Lobby Christmas Tree" date="2017" theme="poem prose">
       <p>
         Eight years old, running across the lobby to the evergreen, elated:
         <br />
@@ -91,7 +91,7 @@ export const App = () => (
         "It's supposed to die!"
       </p>
     </Piece>
-    <Piece title="Houseboat" year="2017">
+    <Piece title="Houseboat" date="2017">
       <p>
         The river is wide and slow here. Music reaches the houseboat from two
         rivaling temples on opposing banks jostling for listenership. It is
@@ -162,7 +162,7 @@ export const App = () => (
       </p>
     </Piece>
 
-    <Piece title="Again" year="2016">
+    <Piece title="Again" date="2016">
       <p>
         From the dirt path she could just make out the distant highway. It
         filled the forest with a muffled amorphous roar, an organic buzz. But
@@ -179,13 +179,13 @@ export const App = () => (
       </p>
     </Piece>
 
-    <Piece title="Winter Tomorrow" year="2016" theme="poem">
+    <Piece title="Winter Tomorrow" date="2016" theme="poem">
       <p>Melted snow on glistening streets under the bright yellow sun.</p>
       <p>Tomorrow it may be winter again,</p>
       <p>But today it is Spring.</p>
     </Piece>
 
-    <Piece title="How to Prepare Oatmeal" year="2016">
+    <Piece title="How to Prepare Oatmeal" date="2016">
       <p>
         The kitchen sink is an emotional and domestic bellwether: has yesterday
         been resolved? Can today begin unburdened? Or are there outstanding
@@ -271,7 +271,7 @@ export const App = () => (
       </p>
     </Piece>
 
-    <Piece title="Small Accomplishments" year="2015">
+    <Piece title="Small Accomplishments" date="2015">
       <p>
         It is the first frigid morning in many months and I’m prepared for my
         bicycle ride: I have gloves inside of my mittens, long underwear (my
@@ -400,13 +400,13 @@ export const App = () => (
       </p>
     </Piece>
 
-    <Piece title="Ageless" year="2015" theme="poem">
+    <Piece title="Ageless" date="2015" theme="poem">
       <p>Full of life and lust</p>
       <p>Ancient born again anew</p>
       <p>The ageless Spring sun</p>
     </Piece>
 
-    <Piece title="The Winter Is Faltering" year="2015" theme="poem">
+    <Piece title="The Winter Is Faltering" date="2015" theme="poem">
       <p>This cold morning seems somehow more industrial.</p>
       <p>Heavy trucks hum and bounce on the beaten streets.</p>
       <p>Steam pours from towers on the other side of the river.</p>
@@ -420,7 +420,7 @@ export const App = () => (
       <p>And I rise, too.</p>
     </Piece>
 
-    <Piece title="Drive" year="2014" theme="poem">
+    <Piece title="Drive" date="2014" theme="poem">
       <p>Winter rising, tonight sinking.</p>
       <p>Well-groomed childhood, adult melancholy.</p>
       <p>Drive.</p>
