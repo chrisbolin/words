@@ -3,7 +3,7 @@
     "start": "react-scripts start",
     "serve": "python -m SimpleHTTPServer",
     "build": "yarn babel && yarn compile",
-    "babel": "babel src/index.js > build/index.js",
+    "babel": "mkdir -p temp/ && babel src/index.js > temp/index.js",
     "compile": "node build/compile.js > index.html"
   },
   "dependencies": {

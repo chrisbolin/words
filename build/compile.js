@@ -3,7 +3,7 @@
 const { readFileSync } = require("fs");
 const React = require("react");
 const { renderToString } = require("react-dom/server");
-const App = require("./index.js").App;
+const App = require("../temp/index.js").App;
 
 const reactElement = React.createElement(App);
 const templatePath = "./build/index-template.html";
