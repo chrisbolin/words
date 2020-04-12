@@ -51,6 +51,16 @@ const Piece = ({ title, year, children, theme = "prose" }) => (
 
 export const App = () => (
   <PiecesApp>
+    <Piece title="Eyelids (April)" year="2020" theme="poem">
+      <p>In these times of darkness</p>
+      <p>Without</p>
+      <p>Close your eyes slowly</p>
+      <p>Tightly</p>
+      <p>And wait to see the warmth</p>
+      <p>Of your own eyelids</p>
+      <p>Within</p>
+    </Piece>
+
     <Piece title="The Lobby Christmas Tree" year="2017" theme="poem prose">
       <p>
         Eight years old, running across the lobby to the evergreen, elated:
