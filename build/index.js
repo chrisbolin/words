@@ -1,7 +1,7 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+  value: true,
 });
 exports.App = undefined;
 
@@ -13,7 +13,9 @@ var _reactDom = require("react-dom");
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
 
 var titleToId = function titleToId(title) {
   return title.toLowerCase().split(" ").join("-");
@@ -21,7 +23,7 @@ var titleToId = function titleToId(title) {
 
 var PiecesApp = function PiecesApp(_ref) {
   var _ref$children = _ref.children,
-      children = _ref$children === undefined ? [] : _ref$children;
+    children = _ref$children === undefined ? [] : _ref$children;
   return _react2.default.createElement(
     "div",
     { id: "app" },
@@ -46,17 +48,16 @@ var Header = function Header(_ref2) {
       _react2.default.createElement(
         "div",
         { className: "title" },
-        _react2.default.createElement(
-          "h1",
-          null,
-          "Writing"
-        )
+        _react2.default.createElement("h1", null, "Writing")
       ),
       _react2.default.createElement(
         "div",
         { className: "links" },
         pieces.map(function (piece, i) {
-          return _react2.default.createElement(PieceLink, { piece: piece, key: i });
+          return _react2.default.createElement(PieceLink, {
+            piece: piece,
+            key: i,
+          });
         })
       )
     )
@@ -78,10 +79,10 @@ var PieceLink = function PieceLink(_ref3) {
 
 var Piece = function Piece(_ref4) {
   var title = _ref4.title,
-      year = _ref4.year,
-      children = _ref4.children,
-      _ref4$theme = _ref4.theme,
-      theme = _ref4$theme === undefined ? "prose" : _ref4$theme;
+    year = _ref4.year,
+    children = _ref4.children,
+    _ref4$theme = _ref4.theme,
+    theme = _ref4$theme === undefined ? "prose" : _ref4$theme;
   return _react2.default.createElement(
     "div",
     { id: titleToId(title), className: "piece page-container" },
@@ -97,16 +98,8 @@ var Piece = function Piece(_ref4) {
           title
         )
       ),
-      _react2.default.createElement(
-        "div",
-        { className: "year" },
-        year
-      ),
-      _react2.default.createElement(
-        "div",
-        { className: "body" },
-        children
-      ),
+      _react2.default.createElement("div", { className: "year" }, year),
+      _react2.default.createElement("div", { className: "body" }, children),
       _react2.default.createElement(
         "a",
         { href: "#", className: "toc-link" },
@@ -116,7 +109,7 @@ var Piece = function Piece(_ref4) {
   );
 };
 
-var App = exports.App = function App() {
+var App = (exports.App = function App() {
   return _react2.default.createElement(
     PiecesApp,
     null,
@@ -128,35 +121,35 @@ var App = exports.App = function App() {
         null,
         "Eight years old, running across the lobby to the evergreen, elated:",
         _react2.default.createElement("br", null),
-        "\"Is it real?\""
+        '"Is it real?"'
       ),
       _react2.default.createElement(
         "p",
         null,
         "Father busy at the counter, ignoring, now her hands and knees on the linoleum floor, inspecting the tree's trunk\u2014sap and bark:",
         _react2.default.createElement("br", null),
-        "\"It's real!\""
+        '"It\'s real!"'
       ),
       _react2.default.createElement(
         "p",
         null,
         "Tree's trunk, sap and bark, in a small bucket of water, needles more yellow-green than green-green:",
         _react2.default.createElement("br", null),
-        "\"Is it dying?\""
+        '"Is it dying?"'
       ),
       _react2.default.createElement(
         "p",
         null,
         "Hands over needles and branches, fingers in the bucket's cold water:",
         _react2.default.createElement("br", null),
-        "\"Is it supposed to die?\""
+        '"Is it supposed to die?"'
       ),
       _react2.default.createElement(
         "p",
         null,
         "Hands again over needles and branches, slowly, considering, pausing, suddenly knowing:",
         _react2.default.createElement("br", null),
-        "\"It's supposed to die!\""
+        '"It\'s supposed to die!"'
       )
     ),
     _react2.default.createElement(
@@ -205,7 +198,7 @@ var App = exports.App = function App() {
       _react2.default.createElement(
         "p",
         null,
-        "I return to my seat. She is still standing onshore, searching, waiting. Her severe eyes are an uncomfortable relief, acknowledging my profound privilege starkly, without deference or kindness. Finally she turns and walks briskly away as the cook calls to me from the deck below: \"Sir, breakfast is ready.\""
+        'I return to my seat. She is still standing onshore, searching, waiting. Her severe eyes are an uncomfortable relief, acknowledging my profound privilege starkly, without deference or kindness. Finally she turns and walks briskly away as the cook calls to me from the deck below: "Sir, breakfast is ready."'
       )
     ),
     _react2.default.createElement(
@@ -235,11 +228,7 @@ var App = exports.App = function App() {
         null,
         "Tomorrow it may be winter again,"
       ),
-      _react2.default.createElement(
-        "p",
-        null,
-        "But today it is Spring."
-      )
+      _react2.default.createElement("p", null, "But today it is Spring.")
     ),
     _react2.default.createElement(
       Piece,
@@ -267,26 +256,14 @@ var App = exports.App = function App() {
       _react2.default.createElement(
         "p",
         null,
-        _react2.default.createElement(
-          "b",
-          null,
-          "A. Pre-heated water:"
-        ),
+        _react2.default.createElement("b", null, "A. Pre-heated water:"),
         " Heat approximately 1 cup of water to boiling, then combine gradually with a serving of oatmeal, using only as much water as is necessary to achieve the desired consistency."
       ),
+      _react2.default.createElement("p", null, "or"),
       _react2.default.createElement(
         "p",
         null,
-        "or"
-      ),
-      _react2.default.createElement(
-        "p",
-        null,
-        _react2.default.createElement(
-          "b",
-          null,
-          "B. Tap water:"
-        ),
+        _react2.default.createElement("b", null, "B. Tap water:"),
         " Combine approximately 1 cup of tap water with a serving of oatmeal, using only as much water as is necessary to achieve the desired consistency (importantly accounting for any water lost to subsequent heating), then heat the mixture."
       ),
       _react2.default.createElement(
@@ -318,11 +295,7 @@ var App = exports.App = function App() {
         "p",
         null,
         "I pick up the ring and inspect it. The small center diamond is flanked by two even smaller diamonds; all three are set in 14-karat white gold. I bought it when I was twenty-three years old, four months after graduating from college. Over the intervening years I have been both embarrassed of the diamonds\u2019 small size (Cambridge, Massachusetts: my best friend introduces us to his Harvard Business School classmates) and embarrassed they were diamonds at all (Austin, Texas: we watch Leonardo DiCaprio in ",
-        _react2.default.createElement(
-          "i",
-          null,
-          "Blood Diamond"
-        ),
+        _react2.default.createElement("i", null, "Blood Diamond"),
         " on DVD). Now I see that this tiny ring is a snapshot of another time: that moment we were na\xEFve and poor and got married too young by any reasonable measure. So often happiness is not reasonable."
       )
     ),
@@ -332,7 +305,7 @@ var App = exports.App = function App() {
       _react2.default.createElement(
         "p",
         null,
-        "It is the first frigid morning in many months and I\u2019m prepared for my bicycle ride: I have gloves inside of my mittens, long underwear (my family always called them \"long johns\"), and second-hand ski goggles. I'm self-conscious about the ski goggles, but they do prevent my eyes from watering in the cold, harsh wind. They also give a golden tint to the world that is subtle at first, its full effect not realized until I finish my journey and take off the goggles and everything loses that ephemeral warm glow."
+        'It is the first frigid morning in many months and I\u2019m prepared for my bicycle ride: I have gloves inside of my mittens, long underwear (my family always called them "long johns"), and second-hand ski goggles. I\'m self-conscious about the ski goggles, but they do prevent my eyes from watering in the cold, harsh wind. They also give a golden tint to the world that is subtle at first, its full effect not realized until I finish my journey and take off the goggles and everything loses that ephemeral warm glow.'
       ),
       _react2.default.createElement(
         "p",
@@ -402,15 +375,11 @@ var App = exports.App = function App() {
         null,
         "After a long while I leave the shower's comfort and maneuver awkwardly around the other gym-goers to my locker. It is so difficult to remember that insofar as they are in my way I am in theirs. I come up with an idea for a bumper sticker:"
       ),
+      _react2.default.createElement("p", null, '"We Are Traffic."'),
       _react2.default.createElement(
         "p",
         null,
-        "\"We Are Traffic.\""
-      ),
-      _react2.default.createElement(
-        "p",
-        null,
-        "(This was the third variation: \"You're Traffic, Too\" seemed to lack self-awareness and \"We Are All Traffic\" felt too patriotic.)"
+        '(This was the third variation: "You\'re Traffic, Too" seemed to lack self-awareness and "We Are All Traffic" felt too patriotic.)'
       ),
       _react2.default.createElement(
         "p",
@@ -425,17 +394,13 @@ var App = exports.App = function App() {
       _react2.default.createElement(
         "p",
         null,
-        "The Bank Teller: \"Happy New Year!\""
+        'The Bank Teller: "Happy New Year!"'
       ),
+      _react2.default.createElement("p", null, 'Me: "Happy New Year\'s!"'),
       _react2.default.createElement(
         "p",
         null,
-        "Me: \"Happy New Year's!\""
-      ),
-      _react2.default.createElement(
-        "p",
-        null,
-        "(Is \"Happy New Year's\" excusable - ostensibly as a truncated \"Happy New Year's Day\" - or not?)"
+        '(Is "Happy New Year\'s" excusable - ostensibly as a truncated "Happy New Year\'s Day" - or not?)'
       ),
       _react2.default.createElement(
         "p",
@@ -446,21 +411,9 @@ var App = exports.App = function App() {
     _react2.default.createElement(
       Piece,
       { title: "Ageless", year: "2015", theme: "poem" },
-      _react2.default.createElement(
-        "p",
-        null,
-        "Full of life and lust"
-      ),
-      _react2.default.createElement(
-        "p",
-        null,
-        "Ancient born again anew"
-      ),
-      _react2.default.createElement(
-        "p",
-        null,
-        "The ageless Spring sun"
-      )
+      _react2.default.createElement("p", null, "Full of life and lust"),
+      _react2.default.createElement("p", null, "Ancient born again anew"),
+      _react2.default.createElement("p", null, "The ageless Spring sun")
     ),
     _react2.default.createElement(
       Piece,
@@ -491,31 +444,19 @@ var App = exports.App = function App() {
         "The winter is faltering now, waning."
       ),
       _react2.default.createElement("br", null),
-      _react2.default.createElement(
-        "p",
-        null,
-        "Of course there is the snow."
-      ),
+      _react2.default.createElement("p", null, "Of course there is the snow."),
       _react2.default.createElement(
         "p",
         null,
         "Of course it covers our little city."
       ),
-      _react2.default.createElement(
-        "p",
-        null,
-        "But it, too, is faltering."
-      ),
+      _react2.default.createElement("p", null, "But it, too, is faltering."),
       _react2.default.createElement(
         "p",
         null,
         "Spring rises, however slowly, however subtly."
       ),
-      _react2.default.createElement(
-        "p",
-        null,
-        "And I rise, too."
-      )
+      _react2.default.createElement("p", null, "And I rise, too.")
     ),
     _react2.default.createElement(
       Piece,
@@ -530,54 +471,28 @@ var App = exports.App = function App() {
         null,
         "Well-groomed childhood, adult melancholy."
       ),
-      _react2.default.createElement(
-        "p",
-        null,
-        "Drive."
-      ),
+      _react2.default.createElement("p", null, "Drive."),
       _react2.default.createElement("br", null),
-      _react2.default.createElement(
-        "p",
-        null,
-        "Fields rising, moon sinking."
-      ),
+      _react2.default.createElement("p", null, "Fields rising, moon sinking."),
       _react2.default.createElement(
         "p",
         null,
         "Stern childhood, broken over the earth."
       ),
-      _react2.default.createElement(
-        "p",
-        null,
-        "Drive."
-      ),
-      _react2.default.createElement(
-        "p",
-        null,
-        "Drive."
-      ),
+      _react2.default.createElement("p", null, "Drive."),
+      _react2.default.createElement("p", null, "Drive."),
       _react2.default.createElement("br", null),
-      _react2.default.createElement(
-        "p",
-        null,
-        "A cold song comes,"
-      ),
-      _react2.default.createElement(
-        "p",
-        null,
-        "Open road in full view."
-      ),
-      _react2.default.createElement(
-        "p",
-        null,
-        "Drive."
-      )
+      _react2.default.createElement("p", null, "A cold song comes,"),
+      _react2.default.createElement("p", null, "Open road in full view."),
+      _react2.default.createElement("p", null, "Drive.")
     )
   );
-};
+});
 
 if (typeof document !== "undefined") {
   // BROWSER
-  _reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById("root"));
+  _reactDom2.default.render(
+    _react2.default.createElement(App, null),
+    document.getElementById("root")
+  );
 }
-

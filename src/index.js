@@ -1,11 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const titleToId = title =>
-  title
-    .toLowerCase()
-    .split(" ")
-    .join("-");
+const titleToId = (title) => title.toLowerCase().split(" ").join("-");
 
 const PiecesApp = ({ children = [] }) => (
   <div id="app">
@@ -24,7 +20,9 @@ const Header = ({ pieces }) => (
         <h1>Writing</h1>
       </div>
       <div className="links">
-        {pieces.map((piece, i) => <PieceLink piece={piece} key={i} />)}
+        {pieces.map((piece, i) => (
+          <PieceLink piece={piece} key={i} />
+        ))}
       </div>
     </div>
   </div>
@@ -56,26 +54,31 @@ export const App = () => (
     <Piece title="The Lobby Christmas Tree" year="2017" theme="poem prose">
       <p>
         Eight years old, running across the lobby to the evergreen, elated:
-        <br />"Is it real?"
+        <br />
+        "Is it real?"
       </p>
       <p>
         Father busy at the counter, ignoring, now her hands and knees on the
         linoleum floor, inspecting the tree's trunk—sap and bark:
-        <br />"It's real!"
+        <br />
+        "It's real!"
       </p>
       <p>
         Tree's trunk, sap and bark, in a small bucket of water, needles more
         yellow-green than green-green:
-        <br />"Is it dying?"
+        <br />
+        "Is it dying?"
       </p>
       <p>
         Hands over needles and branches, fingers in the bucket's cold water:
-        <br />"Is it supposed to die?"
+        <br />
+        "Is it supposed to die?"
       </p>
       <p>
         Hands again over needles and branches, slowly, considering, pausing,
         suddenly knowing:
-        <br />"It's supposed to die!"
+        <br />
+        "It's supposed to die!"
       </p>
     </Piece>
     <Piece title="Houseboat" year="2017">
@@ -341,8 +344,7 @@ export const App = () => (
         Christopher Eric Bolin
         <br />
         1984 - TBD
-        <br />
-        A Life of Small Accomplishments
+        <br />A Life of Small Accomplishments
       </p>
       <p>
         After a long while I leave the shower's comfort and maneuver awkwardly
